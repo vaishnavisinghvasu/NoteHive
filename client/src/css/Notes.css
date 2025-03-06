@@ -1,0 +1,130 @@
+/* Notes Container */
+.notes-container {
+  background: linear-gradient(135deg, #1b263b, #415a77);
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Title */
+.notes-container h2 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Notes Grid */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* No Notes Message */
+.no-notes {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 20px;
+  opacity: 1;
+}
+
+/* Card Design */
+.note-card {
+  width: 100%;
+  max-width: 320px;
+  height: 350px;
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.note-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Card Inner Wrapper */
+.note-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
+
+.note-card:hover .note-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back */
+.note-front,
+.note-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s ease-in-out;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Front Design */
+.note-front {
+  background: linear-gradient(135deg, #243b55, #517fa4);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.note-card:hover .note-front {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Back Design */
+.note-back {
+  background: linear-gradient(135deg, #2c3e50, #4b6584);
+  transform: rotateY(180deg);
+}
+
+/* Note Link */
+.note-back .note-link {
+  display: inline-block;
+  padding: 14px 22px;
+  background: #00a8ff;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.note-back .note-link:hover {
+  background: #0097e6;
+  transform: scale(1.05);
+}

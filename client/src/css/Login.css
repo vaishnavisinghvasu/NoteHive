@@ -1,0 +1,139 @@
+/* Login Form Container */
+.login-form-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 40px;
+  background: linear-gradient(45deg, #a0b1c5, #6e7d8b); /* Balanced Dark Blue and Muted Blue */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-out;
+  position: relative; /* Important for the close button */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #151213; /* Change color on hover for a nice effect */
+}
+
+/* Form Title */
+.login-form-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #e0e1dd; /* Light Cream for title text */
+  margin-bottom: 20px;
+}
+
+/* Input Group for styling */
+.input-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.login-form input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background:white; /* Light Cream background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.login-form input:focus {
+  background: white; /* Medium Soft Blue when focused */
+  color:black;
+  box-shadow: 0 4px 10px rgba(97, 218, 251, 0.4); /* Soft Blue shadow */
+  transform: scale(1.03);
+}
+
+.login-form input::placeholder {
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  background: #6f849c; /* Balanced Muted Blue for the button */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #5a7086; /* Slightly Darker Blue on hover */
+  transform: translateY(-3px);
+}
+
+/* Success and Error Message Styles */
+.success {
+  color: #72c15e; /* Soft Light Green for success */
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.error {
+  color: #ff7f7f; /* Soft Red for error */
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-form-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .login-form-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .login-form input {
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
